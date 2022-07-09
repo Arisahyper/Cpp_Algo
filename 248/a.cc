@@ -4,14 +4,13 @@ using namespace std;
 #define endl "\n"
 
 void solve() {
-    int h, w, r, c, ans = 0; 
-    cin >> h >> w >> r >> c;
- 
-    if ( c != 1) ++ans;
-    if ( c != w) ++ans;
-    if ( r != 1) ++ans;
-    if ( r != h) ++ans;
- 
+    string s;
+    int sum = 0;
+    cin >> s;
+
+    for (int i = 0; i <= 9; i++) sum += s[i];
+
+    char ans = 525 - sum;
     cout << ans << endl;
 }
 
@@ -21,3 +20,4 @@ int main() {
     solve();
     return 0;
 }
+
